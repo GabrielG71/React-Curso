@@ -14,8 +14,21 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
+      function Decremento() {
+        return (
+          <>
+            <p> Contador: </p>
+            <button className="bg-red-500"> Decrementar </button>
+          </>
+        );
+      }
+
       function App() {
-        return <main className="p-5">...</main>;
+        return (
+          <main className="p-5">
+            <Decremento />
+          </main>
+        );
       }
 
       ReactDOM.createRoot(document.getElementById("root")).render(<App />);
