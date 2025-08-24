@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocketseat - React.js - Fundamentos</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      function App() {
+        const [search, setSearch] = React.useState("");
+        const [Nomes, setNomes] = React.useState([
+          "Ana",
+          "Gabriel",
+          "Jean",
+          "Paula",
+          "Michael",
+          "Alice",
+        ]);
+
+        const nomesFiltrados = Nomes.filter((nome) =>
+          nome.toLowerCase().includes(search.toLowerCase())
+        );
+
+        return (
+          <main className="p-5 space-y-4">
+            <input
+              type="text"
+              placeholder="Pesquise pelo nome..."
+              className="border p-2 w-full"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+
+            <ul className="list-disc pl-5">
+              {nomesFiltrados.map((nome, index) => (
+                <li key={`${index}-${nome}`}>{nome}</li>
+              ))}
+            </ul>
+          </main>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
+  </body>
+</html>
