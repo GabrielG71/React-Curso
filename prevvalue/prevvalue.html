@@ -15,10 +15,23 @@
 
     <script type="text/babel">
       function Decremento() {
+        const [counter, setCounter] = React.useState(0);
+
         return (
           <>
-            <p> Contador: </p>
-            <button className="bg-red-500"> Decrementar </button>
+            <p> Contador: {counter} </p>
+            <button
+              className="bg-red-500 p-3 hover:bg-red-900"
+              onClick={() => setCounter((prevValue) => prevValue - 1)}
+            >
+              Decrementar
+            </button>
+            <button
+              className="bg-red-500 p-4 hover:bg-red-900"
+              onClick={() => setCounter(0)}
+            >
+              Zerar
+            </button>
           </>
         );
       }
