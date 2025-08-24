@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocketseat - React.js - Fundamentos</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      function ComprarAlcool() {
+        const [idade, setIdade] = React.useState("");
+
+        function Maiorial() {
+          if (parseInt(idade) >= 18) {
+            alert("Compra permitida");
+          } else {
+            alert("Compra negada");
+          }
+        }
+
+        return (
+          <>
+            <input
+              type="text"
+              placeholder="Digite sua idade"
+              value={idade}
+              onChange={(e) => setIdade(e.target.value)}
+              className="border p-2"
+            />
+            <button className="bg-sky-400 p-3 ml-2" onClick={Maiorial}>
+              Comprar Alcool
+            </button>
+          </>
+        );
+      }
+
+      function App() {
+        return (
+          <main className="p-5">
+            <ComprarAlcool />
+          </main>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
+  </body>
+</html>
