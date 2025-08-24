@@ -10,18 +10,18 @@
     />
   </head>
   <body>
-    <div id="root">
-      <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <div id="root"></div>
 
-      <script type="text/babel">
-        function App() {
-          return <main className="p-5">...</main>;
-        }
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-      </script>
-    </div>
+    <script type="text/babel">
+      function App() {
+        return <main className="p-5">Hello React + Tailwind!</main>;
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
   </body>
 </html>
