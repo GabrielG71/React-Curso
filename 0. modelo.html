@@ -4,18 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rocketseat - React.js - Fundamentos</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root">
       <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
       <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
       <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
       <script type="text/babel">
-        ReactDOM.createRoot(document.getElementById("root")).render(
-          <h1>Hello World!</h1>
-        );
+        function App() {
+          return <main className="p-5">...</main>;
+        }
+
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
       </script>
     </div>
   </body>
