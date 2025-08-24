@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocketseat - React.js - Fundamentos</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+      <script type="text/babel">
+        function Alert() {
+          function alertMsg() {
+            alert("Alertado!!!!!");
+          }
+
+          return (
+            <button type="button" onClick={alertMsg}>
+              Clique aqui
+            </button>
+          );
+        }
+
+        function Alert1() {
+          function alertParm(msg) {
+            alert(msg);
+          }
+
+          let textual = "x1";
+
+          return (
+            <button type="button" onClick={() => alertParm(textual)}>
+              Clique aqui (Parametros)
+            </button>
+          );
+        }
+
+        function Alert2() {
+          function alertText(event) {
+            alert(event.target.previousSibling.value);
+          }
+
+          return (
+            <div>
+              <input type="text" placeholder="Digite alguma coisa.." />
+              <button onClick={alertText}>Mostra o texto aqui</button>
+            </div>
+          );
+        }
+
+        function App() {
+          return (
+            <main className="p-3">
+              <Alert />
+              <Alert1 />
+              <br />
+              <Alert2 />
+            </main>
+          );
+        }
+
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+      </script>
+    </div>
+  </body>
+</html>
