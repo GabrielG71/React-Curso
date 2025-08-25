@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "sans-serif";
+  --shadow-sm: 0px 4px 8px rgba(54, 23, 45, 0.05);
+}
