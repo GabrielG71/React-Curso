@@ -20,3 +20,24 @@ O projeto tem como objetivo praticar os fundamentos do React e consolidar concei
 - Marcar tarefa como concluída
 - Remover tarefa da lista
 - Exibir contagem de tarefas criadas e concluídas
+
+---
+
+## Como usar localmente
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/GabrielG71/React-Curso/tree/main/to-do
+   ```
+
+2. Instale todas as dependências:
+   ```bash
+   cd to-do
+   npm install
+   ```
+3. Execute a aplicação:
+   ```bash
+   npm run dev # Desenvolvimento
+   npm run build # Produção
+   ```
