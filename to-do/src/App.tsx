@@ -1,3 +1,5 @@
+import Text from "./compenents/text";
+
 export default function App() {
-  return <h1 className="">Olá mundo</h1>;
+  return <Text>Olá mundo</Text>;
 }
