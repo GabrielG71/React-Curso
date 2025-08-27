@@ -3,6 +3,9 @@ import TrashIcon from "./assets/icons/Trash-Regular.svg?react";
 import CheckIcon from "./assets/icons/Check-Regular.svg?react";
 import SpinnerIcon from "./assets/icons/Spinner.svg?react";
 import Icon from "./compenents/icon";
+import Badge from "./compenents/badge";
+import Button from "./compenents/button";
+import PlusIcon from "./assets/icons/Plus-Regular.svg?react";
 
 export default function App() {
   return (
@@ -23,6 +26,15 @@ export default function App() {
         <Icon svg={TrashIcon} className="fill-green-950" />
         <Icon svg={CheckIcon} className="fill-pink-500" />
         <Icon svg={SpinnerIcon} className="fill-red-500" animate />
+      </div>
+
+      <div>
+        <Badge variant="secondary">5</Badge>
+        <Badge variant="primary">de 2 a 5</Badge>
+      </div>
+
+      <div>
+        <Button icon={PlusIcon}>Nova Tarefa</Button>
       </div>
     </div>
   );
