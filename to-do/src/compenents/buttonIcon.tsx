@@ -31,7 +31,7 @@ export const ButtonIconIconVariants = cva("", {
     variant: {
       primary: "fill-white",
       secondary: "fill-pink-400 group-hover:fill-white",
-      terciary: "fill-gray-300 group-hover:fill-gray-400",
+      terciary: "fill-gray-500 group-hover:fill-gray-400",
     },
     size: {
       sm: "w-4 h-4",
