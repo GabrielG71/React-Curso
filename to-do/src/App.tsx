@@ -1,17 +1,29 @@
 import Text from "./compenents/text";
+import TrashIcon from "./assets/icons/Trash-Regular.svg?react";
+import CheckIcon from "./assets/icons/Check-Regular.svg?react";
+import SpinnerIcon from "./assets/icons/Spinner.svg?react";
+import Icon from "./compenents/icon";
 
 export default function App() {
   return (
-    <div className="flex flex-col gap-2">
-      <Text variant="body-md-bold" className="text-pink-400">
-        Olá mundo
-      </Text>
-      <Text variant="body-md" className="text-red-400">
-        Olá mundo
-      </Text>
-      <Text variant="body-sm-bold" className="text-amber-500">
-        Olá mundo
-      </Text>
+    <div className="grid gap-3">
+      <div className="flex flex-col gap-2">
+        <Text variant="body-md-bold" className="text-pink-400">
+          Olá mundo
+        </Text>
+        <Text variant="body-md" className="text-red-400">
+          Olá mundo
+        </Text>
+        <Text variant="body-sm-bold" className="text-amber-500">
+          Olá mundo
+        </Text>
+      </div>
+
+      <div className="flex gap-1">
+        <Icon svg={TrashIcon} className="fill-green-950" />
+        <Icon svg={CheckIcon} className="fill-pink-500" />
+        <Icon svg={SpinnerIcon} className="fill-red-500" animate />
+      </div>
     </div>
   );
 }
