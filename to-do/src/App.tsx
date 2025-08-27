@@ -6,6 +6,7 @@ import Icon from "./compenents/icon";
 import Badge from "./compenents/badge";
 import Button from "./compenents/button";
 import PlusIcon from "./assets/icons/Plus-Regular.svg?react";
+import ButtonIcon from "./compenents/buttonIcon";
 
 export default function App() {
   return (
@@ -23,7 +24,7 @@ export default function App() {
       </div>
 
       <div className="flex gap-1">
-        <Icon svg={TrashIcon} className="fill-green-950" />
+        <Icon svg={TrashIcon} className="fill-gray-500" />
         <Icon svg={CheckIcon} className="fill-pink-500" />
         <Icon svg={SpinnerIcon} className="fill-red-500" animate />
       </div>
@@ -35,6 +36,12 @@ export default function App() {
 
       <div>
         <Button icon={PlusIcon}>Nova Tarefa</Button>
+      </div>
+
+      <div className="flex gap-1">
+        <ButtonIcon icon={TrashIcon}></ButtonIcon>
+        <ButtonIcon icon={PlusIcon} variant="secondary"></ButtonIcon>
+        <ButtonIcon icon={CheckIcon} variant="terciary"></ButtonIcon>
       </div>
     </div>
   );
