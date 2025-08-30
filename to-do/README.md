@@ -10,7 +10,7 @@ O projeto tem como objetivo praticar os fundamentos do React e consolidar concei
 - ⚛️ [React](https://react.dev/)
 - 🟦 [TypeScript](https://www.typescriptlang.org/)
 - ⚡ [Vite](https://vitejs.dev/)
-- 🎨 [CSS Modules / Tailwind] _(dependendo do que você usou)_
+- 🎨 Tailwind
 
 ---
 
